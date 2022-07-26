@@ -1,0 +1,35 @@
+.schedule {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  padding-left: 15px;
+}
+
+.schedule > p {
+  font-size: 20px;
+  letter-spacing: 0.02em;
+  color: #293845;
+}
+
+.time {
+  display: flex;
+  column-gap: 15px;
+}
+
+.hour {
+  background-color: #e8833a;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 25px;
+  border-radius: 3px;
+}
+
+.days-available {
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+  padding-bottom: 70px;
+}

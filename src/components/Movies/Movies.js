@@ -4,9 +4,8 @@ import Movie from "../Movie/Movie";
 
 import "./style.css";
 
-export default function Movies() {
+export default function Movies({ setMovieInfo }) {
   const [movies, setMovies] = useState([]);
-
   useEffect(() => {
     axios
       .get("https://mock-api.driven.com.br/api/v5/cineflex/movies")
@@ -16,17 +15,12 @@ export default function Movies() {
       .then((res) => {
         setMovies([...res.data]);
       });
-  });
+  }, []);
 
   return (
     <div className="movie-list">
       {movies.map((movie, index) => (
-        <Movie
-          key={index}
-          id={movie.id}
-          title={movie.title}
-          poster={movie.posterURL}
-        />
+        <Movie key={index} movie={movie} setMovieInfo={setMovieInfo} />
       ))}
     </div>
   );

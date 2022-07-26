@@ -1,9 +1,13 @@
+import { Link } from "react-router-dom";
+
 import "./style.css";
 
-export default function Movie({ id, title, poster }) {
+export default function Movie({ movie, setMovieInfo }) {
   return (
-    <div>
-      <img className="poster" src={poster} alt="img" />
-    </div>
+    <Link to={`/filme/${movie.id}`}>
+      <div onClick={() => setMovieInfo({ ...movie })}>
+        <img className="poster" src={movie.posterURL} alt="img" />
+      </div>
+    </Link>
   );
 }
