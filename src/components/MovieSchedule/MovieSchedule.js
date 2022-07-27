@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
+import Footer from "../Footer/Footer";
 
 import "./style.css";
 
@@ -19,7 +21,14 @@ export default function MovieSchedule({ movieInfo, setTicket }) {
       });
   }, []);
 
-  console.log(days);
+  function updateTicket({ value, hour }) {
+    setTicket({
+      ...movieInfo,
+      hour: hour.name,
+      weekday: value.weekday,
+      session: value.id,
+    });
+  }
 
   return (
     <div className="days-available">
@@ -31,9 +40,16 @@ export default function MovieSchedule({ movieInfo, setTicket }) {
                 <div className="time">
                   {value.showtimes.map((hour, index) => {
                     return (
-                      <div key={index} className="hour">
-                        <p>{hour.name}</p>
-                      </div>
+                      <Link key={index} to={`/sessao/${value.id}`}>
+                        <div
+                          className="hour"
+                          onClick={() => {
+                            updateTicket({ value, hour });
+                          }}
+                        >
+                          <p>{hour.name}</p>
+                        </div>
+                      </Link>
                     );
                   })}
                 </div>
@@ -41,6 +57,7 @@ export default function MovieSchedule({ movieInfo, setTicket }) {
             );
           })
         : "Loading"}
+      <Footer info={days} />
     </div>
   );
 }
