@@ -28,7 +28,13 @@
   height: 72px;
 }
 
-.footer > p {
+.footer p {
   font-size: 26px;
   color: #293845;
+}
+
+.footer span {
+  display: flex;
+  flex-direction: column;
+  row-gap: 6px;
 }

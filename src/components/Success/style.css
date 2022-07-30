@@ -1,0 +1,104 @@
+.successPage {
+  margin-top: 67px;
+  width: 100%;
+}
+
+.order-complete {
+  color: #000000;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 67px;
+  padding: 40px 0;
+}
+.successPage h2 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 24px;
+  width: 165px;
+  letter-spacing: 0.04em;
+  color: #247a6b;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.movieSession {
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+.movieSession > p {
+  font-weight: 700;
+  font-size: 24px;
+  color: #293845;
+}
+
+.movieSession > div > p {
+  font-weight: 400;
+  font-size: 22px;
+  color: #293845;
+}
+
+.movieSession > div {
+  display: flex;
+  flex-direction: column;
+  row-gap: 6px;
+}
+
+.ticket {
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+.ticket > p {
+  font-weight: 700;
+  font-size: 24px;
+  color: #293845;
+}
+
+.ticket > div > p {
+  font-weight: 400;
+  font-size: 22px;
+  color: #293845;
+}
+
+.ticket > div {
+  display: flex;
+  flex-direction: column;
+  row-gap: 6px;
+}
+
+.buyer {
+  padding: 30px 0 0 20px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+.buyer > p {
+  font-weight: 700;
+  font-size: 24px;
+  color: #293845;
+}
+
+.buyer > div {
+  display: flex;
+  flex-direction: column;
+  row-gap: 6px;
+}
+
+.buyer > div > p {
+  display: flex;
+  font-weight: 400;
+  font-size: 22px;
+  color: #293845;
+}

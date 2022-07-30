@@ -8,7 +8,7 @@ export default function Movies({ setMovieInfo }) {
   const [movies, setMovies] = useState([]);
   useEffect(() => {
     axios
-      .get("https://mock-api.driven.com.br/api/v5/cineflex/movies")
+      .get("https://mock-api.driven.com.br/api/v7/cineflex/movies")
       .catch((error) => {
         console.log(error);
       })

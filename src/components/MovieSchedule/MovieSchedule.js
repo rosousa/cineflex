@@ -26,7 +26,8 @@ export default function MovieSchedule({ movieInfo, setTicket }) {
       ...movieInfo,
       hour: hour.name,
       weekday: value.weekday,
-      session: value.id,
+      session: hour.id,
+      date: value.date,
     });
   }
 
@@ -40,7 +41,7 @@ export default function MovieSchedule({ movieInfo, setTicket }) {
                 <div className="time">
                   {value.showtimes.map((hour, index) => {
                     return (
-                      <Link key={index} to={`/sessao/${value.id}`}>
+                      <Link key={index} to={`/assentos/${hour.id}`}>
                         <div
                           className="hour"
                           onClick={() => {

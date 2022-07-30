@@ -4,6 +4,7 @@ import NavBar from "./components/NavBar/NavBar";
 import Home from "./components/Home/Home";
 import MovieHour from "./components/MovieHour/MovieHour";
 import Session from "./components/Session/Session";
+import Success from "./components/Success/Success";
 
 import "./assets/css/reset.css";
 import "./assets/css/style.css";
@@ -20,13 +21,14 @@ function App() {
       <Routes>
         <Route path="/" element={<Home setMovieInfo={setMovieInfo} />} />
         <Route
-          path={`/filme/${movieInfo.id}`}
+          path={`/filme/:movieId`}
           element={<MovieHour movieInfo={movieInfo} setTicket={setTicket} />}
         />
         <Route
-          path={`/sessao/${ticket.session}`}
-          element={<Session ticket={ticket} />}
+          path={`/assentos/:sessionId`}
+          element={<Session setTicket={setTicket} ticket={ticket} />}
         />
+        <Route path="/sucesso" element={<Success ticket={ticket} />} />
       </Routes>
     </BrowserRouter>
   );

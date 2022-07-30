@@ -7,7 +7,16 @@ export default function Footer({ info }) {
       <div>
         <img src={info.posterURL} alt="Movie" />
       </div>
-      <p>{info.title}</p>
+      <span>
+        <p>{info.title}</p>
+        {info.weekday !== undefined ? (
+          <p>
+            {info.weekday} - {info.hour}
+          </p>
+        ) : (
+          ""
+        )}
+      </span>
     </div>
   );
 }
