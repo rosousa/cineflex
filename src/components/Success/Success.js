@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import "./style.css";
 
 export default function Success({ ticket }) {
@@ -30,6 +32,13 @@ export default function Success({ ticket }) {
             <p>Nome: {ticket.nome}</p>
             <p>CPF: {ticket.cpf}</p>
           </div>
+        </div>
+        <div className="backHome">
+          <Link to="/">
+            <div>
+              <p>Voltar pra Home</p>
+            </div>
+          </Link>
         </div>
       </div>
     </div>
