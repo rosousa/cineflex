@@ -47,7 +47,6 @@ export default function Session({ ticket, setTicket }) {
             console.log(error);
           })
           .then((res) => {
-            console.log(res);
             setTicket({ ...ticket, ids, cpf, nome, assentosNum });
             navigate("/sucesso");
           });
